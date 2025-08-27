@@ -5,9 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Emergency Service Directory</title>
 </head>
 <body>
-    
+     <header>
+        <!-- Header Nav  -->
+        <div class="bg-white h-24 flex justify-between items-center pl-[75px] pr-[75px] pt-[27px] pb-[27px]">
+            <div class="flex justify-center items-center gap-3">
+                <img src="./assets/logo.png" alt="GOVBD" class="w-[50px]">
+                <p class="text-[#006747] font-extrabold text-2xl leading-6">Emergency <br> Service</p>
+            </div>
+            <div class="flex justify-around items-center gap-5">
+                <button id="hearBtn" class="w-[120px] h-[50px] flex justify-center items-center p-3 rounded-[50px] bg-[rgba(65,255,107,0.1)] gap-2.5 text-[16px] font-extrabold">0 <img src="./assets/heart.png" alt="heart" class="w-[30px]"></button>
+                <button id="coinBtn" class="w-[120px] h-[50px] flex justify-center items-center p-3 rounded-[50px] bg-[rgba(65,255,107,0.1)] gap-2.5 font-extrabold">100 <img src="./assets/coin.png" alt="coin" class="w-[30px]"></button>
+                <button id="copyBtn" class="w-[120px] h-[50px] p-3 rounded-[50px] bg-[#00A63E] font-semibold text-white">2 Copy</button>
+            </div>
+        </div>
+    </header>
+
 </body>
 </html>
