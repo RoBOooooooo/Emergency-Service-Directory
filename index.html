@@ -1,29 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5"rel="stylesheet"type="text/css"/>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="crossorigin="anonymous"referrerpolicy="no-referrer"/>
     <title>Emergency Service Directory</title>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Header Nav  -->
     <div class="bg-white h-24 flex justify-between items-center pl-[75px] pr-[75px] pt-[27px] pb-[27px]">
-        <div class="flex justify-center items-center gap-3">
-             <img src="./assets/logo.png" alt="" class="w-[50px]">
-             <p class="text-[#006747] font-extrabold text-2xl leading-6">Emergency <br> Service</p>
-        </div>
-        <div class="flex justify-around items-center gap-5">
-            <button id="hearBtn" class="w-[120px] h-[50px] flex justify-center items-center p-3 rounded-[50px] bg-[rgba(65,255,107,0.1)] gap-2.5 text-[16px] font-extrabold">0 <img src="./assets/heart.png" alt="" class="w-[30px]"></button>
-            <button id="coinBtn" class="w-[120px] h-[50px] flex justify-center items-center p-3 rounded-[50px] bg-[rgba(65,255,107,0.1)] gap-2.5 font-extrabold">100 <img src="./assets/coin.png" alt="" class="w-[30px]"></button>
-            <button id="copyBtn" class="w-[120px] h-[50px] p-3 rounded-[50px] bg-[#00A63E] font-semibold text-white">2 Copy</button>
-            </div>
-        </div>
-    <section class="bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223] text-center text-white py-10"><img src="./assets/logo.png" class="mx-auto w-20 mb-3">
-    <h1 class="text-3xl font-extrabold">Emergency Service Directory</h1>
-    <p class="mt-2">Government Emergency Services at Your Fingertip – A Project by Government of the People’s Republic of Bangladesh</p>
+      <div class="flex justify-center items-center gap-3">
+        <img src="./assets/logo.png" alt="" class="w-[50px]" />
+        <p class="text-[#006747] font-extrabold text-2xl leading-6">Emergency <br />Service</p>
+      </div>
+      <div class="flex justify-around items-center gap-5"><button id="hearBtn"class="w-[120px] h-[50px] flex justify-center items-center p-3 rounded-[50px] bg-[rgba(65,255,107,0.1)] gap-2.5 text-[16px] font-extrabold">0 <img src="./assets/heart.png" alt="" class="w-[30px]" /></button>
+        <button id="coinBtn" class="w-[120px] h-[50px] flex justify-center items-center p-3 rounded-[50px] bg-[rgba(65,255,107,0.1)] gap-2.5 font-extrabold">100 <img src="./assets/coin.png" alt="" class="w-[30px]" /></button>
+        <button id="copyBtn"class="w-[120px] h-[50px] p-3 rounded-[50px] bg-[#00A63E] font-semibold text-white">2 Copy</button>
+      </div>
+    </div>
+    <section class="bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223] text-center text-white py-10">
+      <img src="./assets/logo.png" class="mx-auto w-20 mb-3" />
+      <h1 class="text-3xl font-extrabold">Emergency Service Directory</h1>
+      <p class="mt-2">Government Emergency Services at Your Fingertip – A Project byGovernment of the People’s Republic of Bangladesh</p>
     </section>
-</body>
+
+    <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-6">
+  
+  <!-- Card 1 -->
+  <div class="card bg-white shadow p-6 relative">
+    <div class="absolute top-3 right-3">
+      <button class="heartBtn"></button>
+    </div>
+    <div class="flex items-center space-x-2 mb-3">
+      <img src="./assets/emergency.png" class="w-10 h-10">
+    </div>
+    <h2 class="font-bold text-lg">National Emergency Number</h2>
+    <p class="text-gray-500">National Emergency</p>
+    <p class="text-xl font-bold mt-2">999</p>
+    <span class="badge bg-gray-200 text-black mt-2">All</span>
+
+    <div class="flex space-x-2 mt-4">
+      <button class="copyBtn btn btn-sm flex-1"> Copy</button>
+      <button class="callBtn btn btn-sm btn-success flex-1"> Call</button>
+    </div>
+  </div>
+
+      <!-- History Section -->
+      <div class="col-span-1 card bg-white shadow p-4">
+        <div class="flex justify-between items-center mb-4">
+          <h2 class="font-bold text-lg flex items-center gap-1">Call History</h2>
+          <button id="clearHistory" class="btn btn-sm btn-success">Clear</button>
+        </div>
+        <ul id="historyList" class="space-y-2 text-sm">
+        </ul>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
 </html>
