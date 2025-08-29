@@ -117,6 +117,6 @@ function copyText(elements) {
     }
   }
 
-  navigator.clipboard.writeText(textContent);
+  navigator.clipboard.writeText(textContent.split(" ")[0]);
   window.alert("Copied Number: " + textContent);
 }
