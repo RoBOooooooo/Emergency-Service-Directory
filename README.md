@@ -57,3 +57,4 @@ When an event occurs on an element, it bubbles up from the target element to its
 
 **stopPropagation()**
   -  stopPropagation(): Event bubbling বন্ধ করে। যেমন: Child element click করলে parent handler fire হবে না যদি stopPropagation() use করা হয়।
+
