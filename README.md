@@ -1,23 +1,19 @@
-
 # JavaScript Answers
 
 ## Ans-01: Difference between getElementById, getElementsByClassName, querySelector, and querySelectorAll
 
 - **getElementById('id')**
-  - Selects a **single element** with the given ID.
-  - Returns a **single element**.
+ - Selects a single element with the given ID. Returns a single element.
 
 - **getElementsByClassName('class')**
-  - Selects **all elements** with the given class.
-  - Returns an **HTMLCollection** (live collection).
+ - Selects all elements with the given class. Returns an HTMLCollection (live collection).
+
 
 - **querySelector('selector')**
-  - Selects the **first element** that matches a CSS selector.
-  - Returns a **single element**.
+ -  Selects the first element that matches a CSS selector.
 
 - **querySelectorAll('selector')**
-  - Selects **all elements** matching the CSS selector.
-  - Returns a **NodeList**.
+- Selects all elements matching the CSS selector. Returns a NodeList.
 
 ---
 
@@ -42,28 +38,22 @@
 
 
 ## Ans-03: Event Bubbling
-When an event occurs on an element, it **bubbles up** from the target element to its ancestors.  
-
-**Example:**  
-If a button is clicked, the event first triggers the button’s handler, then moves to its parent, grandparent, up to `<body>` and `<html>`.
+When an event occurs on an element, it bubbles up from the target element to its ancestors. Example: Button click করলে প্রথমে button এর handler চলে parent grandparent শেষ পর্যন্ত <body> বা <html> এ পৌঁছায়।
 
 ---
 
 ## Ans-04: Event Delegation
-Instead of adding listeners to multiple child elements, a **single listener is placed on the parent element**.  
-- Uses `event.target` to identify which child triggered the event.  
-- Benefits:
-  - Saves memory
-  - Works well with dynamically created elements  
+
+অনেক child element এ listener দেয়ার পরিবর্তে, parent element এ একটি listener বসানো হয় এবং event.target ব্যবহার করে child handle করা হয়। এর উপকারিতা হলো Memory কম লাগে এবং Dynamic element এর জন্যও কাজ করে
+
 
 ---
 
 ## Ans-05: Difference between preventDefault() and stopPropagation()
 
-1. **preventDefault()**
-   - Prevents the default behavior of an event.  
-   - Example: A link click normally navigates to another page, but `preventDefault()` stops the navigation.
+**preventDefault()**
+ -  preventDefault(): Event এর default behavior আচরণ বন্ধ করে। যেমন: link click করলে normally page navigate করে, কিন্তু preventDefault() দিলে navigate বন্ধ হবে।
 
-2. **stopPropagation()**
-   - Stops event bubbling.  
-   - Example: If a child element is clicked, the parent handler will **not fire** when `stopPropagation()` is used.
+
+**stopPropagation()**
+  -  stopPropagation(): Event bubbling বন্ধ করে। যেমন: Child element click করলে parent handler fire হবে না যদি stopPropagation() use করা হয়।
