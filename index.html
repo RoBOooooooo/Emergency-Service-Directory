@@ -3,59 +3,443 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5"rel="stylesheet"type="text/css"/>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"rel="stylesheet"type="text/css"/>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="crossorigin="anonymous"referrerpolicy="no-referrer"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"/>
     <title>Emergency Service Directory</title>
   </head>
   <body>
     <!-- Header Nav  -->
-    <div class="bg-white h-24 flex justify-between items-center pl-[75px] pr-[75px] pt-[27px] pb-[27px]">
+    <div
+      class="bg-white flex flex-col md:flex-row gap-6 justify-between items-center pl-[75px] pr-[75px] pt-[27px] pb-[27px]">
       <div class="flex justify-center items-center gap-3">
         <img src="./assets/logo.png" alt="" class="w-[50px]" />
-        <p class="text-[#006747] font-extrabold text-2xl leading-6">Emergency <br />Service</p>
+        <p class="text-[#006747] font-extrabold text-2xl leading-6">
+          Emergency <br />Service
+        </p>
       </div>
-      <div class="flex justify-around items-center gap-5"><button id="hearBtn"class="w-[120px] h-[50px] flex justify-center items-center p-3 rounded-[50px] bg-[rgba(65,255,107,0.1)] gap-2.5 text-[16px] font-extrabold">0 <img src="./assets/heart.png" alt="" class="w-[30px]" /></button>
-        <button id="coinBtn" class="w-[120px] h-[50px] flex justify-center items-center p-3 rounded-[50px] bg-[rgba(65,255,107,0.1)] gap-2.5 font-extrabold">100 <img src="./assets/coin.png" alt="" class="w-[30px]" /></button>
-        <button id="copyBtn"class="w-[120px] h-[50px] p-3 rounded-[50px] bg-[#00A63E] font-semibold text-white">2 Copy</button>
-      </div>
-    </div>
-    <section class="bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223] text-center text-white py-10">
-      <img src="./assets/logo.png" class="mx-auto w-20 mb-3" />
-      <h1 class="text-3xl font-extrabold">Emergency Service Directory</h1>
-      <p class="mt-2">Government Emergency Services at Your Fingertip – A Project byGovernment of the People’s Republic of Bangladesh</p>
-    </section>
-
-    <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 p-6">
-  
-  <!-- Card 1 -->
-  <div class="card bg-white shadow p-6 relative">
-    <div class="absolute top-3 right-3">
-      <button class="heartBtn"></button>
-    </div>
-    <div class="flex items-center space-x-2 mb-3">
-      <img src="./assets/emergency.png" class="w-10 h-10">
-    </div>
-    <h2 class="font-bold text-lg">National Emergency Number</h2>
-    <p class="text-gray-500">National Emergency</p>
-    <p class="text-xl font-bold mt-2">999</p>
-    <span class="badge bg-gray-200 text-black mt-2">All</span>
-
-    <div class="flex space-x-2 mt-4">
-      <button class="copyBtn btn btn-sm flex-1"> Copy</button>
-      <button class="callBtn btn btn-sm btn-success flex-1"> Call</button>
-    </div>
-  </div>
-
-      <!-- History Section -->
-      <div class="col-span-1 card bg-white shadow p-4">
-        <div class="flex justify-between items-center mb-4">
-          <h2 class="font-bold text-lg flex items-center gap-1">Call History</h2>
-          <button id="clearHistory" class="btn btn-sm btn-success">Clear</button>
+      <div class="flex justify-around items-center gap-5">
+        <div
+          class="w-[120px] h-[50px] flex justify-center items-center p-3 rounded-[50px] bg-[rgba(65,255,107,0.1)] gap-2.5 text-[16px] font-extrabold"
+        >
+          <button id="heartBtn">0</button>
+          <img src="./assets/heart.png" alt="" class="w-[30px]" />
         </div>
-        <ul id="historyList" class="space-y-2 text-sm">
-        </ul>
+        <div
+          class="w-[120px] h-[50px] flex justify-center items-center p-3 rounded-[50px] bg-[rgba(65,255,107,0.1)] gap-2.5 font-extrabold"
+        >
+          <button id="coinBtn">100</button>
+          <img src="./assets/coin.png" alt="" class="w-[30px]" />
+        </div>
+        <div
+          class="w-[120px] h-[50px] p-3 rounded-[50px] bg-[#00a63e] font-semibold text-center text-white"
+        >
+          <button id="copyBtn">0</button>
+          <span>Copy</span>
+        </div>
       </div>
+    </div>
+    <!-- Hero Section -->
+    <section
+      class="bg-gradient-to-r from-[#013223] via-[#006747] to-[#013223] text-center text-white py-10"
+    >
+      <img src="./assets/logo-dark.png" class="mx-auto w-20 mb-3" />
+      <h1 class="text-3xl font-extrabold">Emergency Service Directory</h1>
+      <p class="mt-2">
+        Government Emergency Services at Your Fingertip – A Project byGovernment
+        of the People’s Republic of Bangladesh
+      </p>
+    </section>
+    <!-- Body Section -->
+
+    <!-- Card Section -->
+    <main class="flex flex-col md:flex-row justify-center mt-12">
+      <section class="w-full md:w-[80%] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6">
+      <!-- Card 1 -->
+      <div class="card card-1 bg-white shadow p-6 relative">
+        <div class="absolute top-3 right-3">
+          <button class="heartBtn cursor-pointer">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              width="30"
+              zoomAndPan="magnify"
+              viewBox="0 0 30 30.000001"
+              height="30"
+              preserveAspectRatio="xMidYMid meet"
+              version="1.0"
+              fill="transparent"
+              stroke="black"
+            >
+              <path
+                stroke-linecap="butt"
+                transform="matrix(0.725806, 0, 0, 0.725806, 2.207069, 3.731482)"
+                stroke-linejoin="miter"
+                d="M 1.399254 4.923083 C -1.458558 9.632284 0.554289 14.217701 3.083803 16.65034 L 17.878768 30.842528 L 32.361581 16.698778 C 34.71349 14.083153 35.617657 11.306069 35.117136 8.216833 C 34.422865 3.943569 30.903074 0.622909 26.549081 0.149298 C 23.879636 -0.135945 21.301685 0.617527 19.288838 2.291312 C 18.745261 2.743395 18.260886 3.243916 17.841094 3.792875 C 17.340574 3.168569 16.753942 2.598083 16.086581 2.09218 C 13.772344 0.337666 10.828421 -0.361986 7.997518 0.18159 C 5.31731 0.698257 2.91158 2.425861 1.399254 4.923083 Z M 1.399254 4.923083 "
+                stroke-width="4"
+                stroke-opacity="1"
+                stroke-miterlimit="4"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="flex items-center space-x-2 mb-3">
+          <img src="./assets/emergency.png" class="w-10 h-10" />
+        </div>
+        <h2 class="card-title font-bold text-lg">National Emergency Number</h2>
+        <p class="text-gray-500">National Emergency</p>
+        <p class="card-content text-xl font-bold mt-2">999</p>
+        <span class="badge bg-gray-200 text-black mt-2">All</span>
+        <div class="flex space-x-2 mt-4">
+          <button class="copyBtn btn btn-sm flex-1"<span><i class="fa-regular fa-copy"></i></span>Copy</button>
+          <button class="callBtn btn btn-sm bg-[#00a63e] flex-1"<span><i class="fa-solid fa-phone"></i></span>Call</button>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="card card-2 bg-white shadow p-6 relative">
+        <div class="absolute top-3 right-3">
+          <button class="heartBtn cursor-pointer">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              width="30"
+              zoomAndPan="magnify"
+              viewBox="0 0 30 30.000001"
+              height="30"
+              preserveAspectRatio="xMidYMid meet"
+              version="1.0"
+              fill="transparent"
+              stroke="black"
+            >
+              <path
+                stroke-linecap="butt"
+                transform="matrix(0.725806, 0, 0, 0.725806, 2.207069, 3.731482)"
+                stroke-linejoin="miter"
+                d="M 1.399254 4.923083 C -1.458558 9.632284 0.554289 14.217701 3.083803 16.65034 L 17.878768 30.842528 L 32.361581 16.698778 C 34.71349 14.083153 35.617657 11.306069 35.117136 8.216833 C 34.422865 3.943569 30.903074 0.622909 26.549081 0.149298 C 23.879636 -0.135945 21.301685 0.617527 19.288838 2.291312 C 18.745261 2.743395 18.260886 3.243916 17.841094 3.792875 C 17.340574 3.168569 16.753942 2.598083 16.086581 2.09218 C 13.772344 0.337666 10.828421 -0.361986 7.997518 0.18159 C 5.31731 0.698257 2.91158 2.425861 1.399254 4.923083 Z M 1.399254 4.923083 "
+                stroke-width="4"
+                stroke-opacity="1"
+                stroke-miterlimit="4"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="flex items-center space-x-2 mb-3">
+          <img src="./assets/police.png" class="w-10 h-10" />
+        </div>
+        <h2 class="card-title font-bold text-lg">Police Helpline Number</h2>
+        <p class="text-gray-500">Police</p>
+        <p class="card-content text-xl font-bold mt-2">999</p>
+        <span class="badge bg-gray-200 text-black mt-2">Police</span>
+        <div class="flex space-x-2 mt-4">
+          <button class="copyBtn btn btn-sm flex-1"<span><i class="fa-regular fa-copy"></i></span>Copy</button>
+          <button class="callBtn btn btn-sm bg-[#00a63e] flex-1">Call</button>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="card card-3 bg-white shadow p-6 relative">
+        <div class="absolute top-3 right-3">
+          <button class="heartBtn cursor-pointer">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              width="30"
+              zoomAndPan="magnify"
+              viewBox="0 0 30 30.000001"
+              height="30"
+              preserveAspectRatio="xMidYMid meet"
+              version="1.0"
+              fill="transparent"
+              stroke="black"
+            >
+              <path
+                stroke-linecap="butt"
+                transform="matrix(0.725806, 0, 0, 0.725806, 2.207069, 3.731482)"
+                stroke-linejoin="miter"
+                d="M 1.399254 4.923083 C -1.458558 9.632284 0.554289 14.217701 3.083803 16.65034 L 17.878768 30.842528 L 32.361581 16.698778 C 34.71349 14.083153 35.617657 11.306069 35.117136 8.216833 C 34.422865 3.943569 30.903074 0.622909 26.549081 0.149298 C 23.879636 -0.135945 21.301685 0.617527 19.288838 2.291312 C 18.745261 2.743395 18.260886 3.243916 17.841094 3.792875 C 17.340574 3.168569 16.753942 2.598083 16.086581 2.09218 C 13.772344 0.337666 10.828421 -0.361986 7.997518 0.18159 C 5.31731 0.698257 2.91158 2.425861 1.399254 4.923083 Z M 1.399254 4.923083 "
+                stroke-width="4"
+                stroke-opacity="1"
+                stroke-miterlimit="4"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="flex items-center space-x-2 mb-3">
+          <img src="./assets/fire-service.png" class="w-10 h-10" />
+        </div>
+        <h2 class="card-title font-bold text-lg">Fire Service Number</h2>
+        <p class="text-gray-500">Fire Service</p>
+        <p class="card-content text-xl font-bold mt-2">999</p>
+        <span class="badge bg-gray-200 text-black mt-2">Fire</span>
+        <div class="flex space-x-2 mt-4">
+          <button class="copyBtn btn btn-sm flex-1"<span><i class="fa-regular fa-copy"></i></span>Copy</button>
+          <button class="callBtn btn btn-sm bg-[#00a63e] flex-1">Call</button>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="card card-4 bg-white shadow p-6 relative">
+        <div class="absolute top-3 right-3">
+          <button class="heartBtn cursor-pointer">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              width="30"
+              zoomAndPan="magnify"
+              viewBox="0 0 30 30.000001"
+              height="30"
+              preserveAspectRatio="xMidYMid meet"
+              version="1.0"
+              fill="transparent"
+              stroke="black"
+            >
+              <path
+                stroke-linecap="butt"
+                transform="matrix(0.725806, 0, 0, 0.725806, 2.207069, 3.731482)"
+                stroke-linejoin="miter"
+                d="M 1.399254 4.923083 C -1.458558 9.632284 0.554289 14.217701 3.083803 16.65034 L 17.878768 30.842528 L 32.361581 16.698778 C 34.71349 14.083153 35.617657 11.306069 35.117136 8.216833 C 34.422865 3.943569 30.903074 0.622909 26.549081 0.149298 C 23.879636 -0.135945 21.301685 0.617527 19.288838 2.291312 C 18.745261 2.743395 18.260886 3.243916 17.841094 3.792875 C 17.340574 3.168569 16.753942 2.598083 16.086581 2.09218 C 13.772344 0.337666 10.828421 -0.361986 7.997518 0.18159 C 5.31731 0.698257 2.91158 2.425861 1.399254 4.923083 Z M 1.399254 4.923083 "
+                stroke-width="4"
+                stroke-opacity="1"
+                stroke-miterlimit="4"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="flex items-center space-x-2 mb-3">
+          <img src="./assets/ambulance.png" class="w-10 h-10" />
+        </div>
+        <h2 class="card-title font-bold text-lg">Ambulance Service</h2>
+        <p class="text-gray-500">Ambulance</p>
+        <p class="card-content text-xl font-bold mt-2">1994-999999</p>
+        <span class="badge bg-gray-200 text-black mt-2">Health</span>
+        <div class="flex space-x-2 mt-4">
+          <button class="copyBtn btn btn-sm flex-1"<span><i class="fa-regular fa-copy"></i></span>Copy</button>
+          <button class="callBtn btn btn-sm bg-[#00a63e] flex-1">Call</button>
+        </div>
+      </div>
+      
+      <!-- Card 5 -->
+      <div class="card card-5 bg-white shadow p-6 relative">
+        <div class="absolute top-3 right-3">
+          <button class="heartBtn cursor-pointer">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              width="30"
+              zoomAndPan="magnify"
+              viewBox="0 0 30 30.000001"
+              height="30"
+              preserveAspectRatio="xMidYMid meet"
+              version="1.0"
+              fill="transparent"
+              stroke="black"
+            >
+              <path
+                stroke-linecap="butt"
+                transform="matrix(0.725806, 0, 0, 0.725806, 2.207069, 3.731482)"
+                stroke-linejoin="miter"
+                d="M 1.399254 4.923083 C -1.458558 9.632284 0.554289 14.217701 3.083803 16.65034 L 17.878768 30.842528 L 32.361581 16.698778 C 34.71349 14.083153 35.617657 11.306069 35.117136 8.216833 C 34.422865 3.943569 30.903074 0.622909 26.549081 0.149298 C 23.879636 -0.135945 21.301685 0.617527 19.288838 2.291312 C 18.745261 2.743395 18.260886 3.243916 17.841094 3.792875 C 17.340574 3.168569 16.753942 2.598083 16.086581 2.09218 C 13.772344 0.337666 10.828421 -0.361986 7.997518 0.18159 C 5.31731 0.698257 2.91158 2.425861 1.399254 4.923083 Z M 1.399254 4.923083 "
+                stroke-width="4"
+                stroke-opacity="1"
+                stroke-miterlimit="4"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="flex items-center space-x-2 mb-3">
+          <img src="./assets/emergency.png" class="w-10 h-10" />
+        </div>
+        <h2 class="card-title font-bold text-lg">Women & Child Helpline</h2>
+        <p class="text-gray-500">Women & Child Helpline</p>
+        <p class="card-content text-xl font-bold mt-2">109</p>
+        <span class="badge bg-gray-200 text-black mt-2">Help</span>
+        <div class="flex space-x-2 mt-4">
+          <button class="copyBtn btn btn-sm flex-1"<span><i class="fa-regular fa-copy"></i></span>Copy</button>
+          <button class="callBtn btn btn-sm bg-[#00a63e] flex-1">Call</button>
+        </div>
+      </div>
+
+        <!-- Card 6 -->
+      </div>
+      <div class="card card-6 bg-white shadow p-6 relative">
+        <div class="absolute top-3 right-3">
+          <button class="heartBtn cursor-pointer">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              width="30"
+              zoomAndPan="magnify"
+              viewBox="0 0 30 30.000001"
+              height="30"
+              preserveAspectRatio="xMidYMid meet"
+              version="1.0"
+              fill="transparent"
+              stroke="black"
+            >
+              <path
+                stroke-linecap="butt"
+                transform="matrix(0.725806, 0, 0, 0.725806, 2.207069, 3.731482)"
+                stroke-linejoin="miter"
+                d="M 1.399254 4.923083 C -1.458558 9.632284 0.554289 14.217701 3.083803 16.65034 L 17.878768 30.842528 L 32.361581 16.698778 C 34.71349 14.083153 35.617657 11.306069 35.117136 8.216833 C 34.422865 3.943569 30.903074 0.622909 26.549081 0.149298 C 23.879636 -0.135945 21.301685 0.617527 19.288838 2.291312 C 18.745261 2.743395 18.260886 3.243916 17.841094 3.792875 C 17.340574 3.168569 16.753942 2.598083 16.086581 2.09218 C 13.772344 0.337666 10.828421 -0.361986 7.997518 0.18159 C 5.31731 0.698257 2.91158 2.425861 1.399254 4.923083 Z M 1.399254 4.923083 "
+                stroke-width="4"
+                stroke-opacity="1"
+                stroke-miterlimit="4"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="flex items-center space-x-2 mb-3">
+          <img src="./assets/emergency.png" class="w-10 h-10" />
+        </div>
+        <h2 class="card-title font-bold text-lg">Anti-Corruption Helpline</h2>
+        <p class="text-gray-500">Anti-Corruption</p>
+        <p class="card-content text-xl font-bold mt-2">106</p>
+        <span class="badge bg-gray-200 text-black mt-2">Govt.</span>
+        <div class="flex space-x-2 mt-4">
+          <button class="copyBtn btn btn-sm flex-1"<span><i class="fa-regular fa-copy"></i></span>Copy</button>
+          <button class="callBtn btn btn-sm bg-[#00A63E] flex-1">Call</button>
+        </div>
+      </div>
+
+        <!-- Card 7 -->
+      <div class="card card-1 bg-white shadow p-6 relative">
+        <div class="absolute top-3 right-3">
+          <button class="heartBtn cursor-pointer">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              width="30"
+              zoomAndPan="magnify"
+              viewBox="0 0 30 30.000001"
+              height="30"
+              preserveAspectRatio="xMidYMid meet"
+              version="1.0"
+              fill="transparent"
+              stroke="black"
+            >
+              <path
+                stroke-linecap="butt"
+                transform="matrix(0.725806, 0, 0, 0.725806, 2.207069, 3.731482)"
+                stroke-linejoin="miter"
+                d="M 1.399254 4.923083 C -1.458558 9.632284 0.554289 14.217701 3.083803 16.65034 L 17.878768 30.842528 L 32.361581 16.698778 C 34.71349 14.083153 35.617657 11.306069 35.117136 8.216833 C 34.422865 3.943569 30.903074 0.622909 26.549081 0.149298 C 23.879636 -0.135945 21.301685 0.617527 19.288838 2.291312 C 18.745261 2.743395 18.260886 3.243916 17.841094 3.792875 C 17.340574 3.168569 16.753942 2.598083 16.086581 2.09218 C 13.772344 0.337666 10.828421 -0.361986 7.997518 0.18159 C 5.31731 0.698257 2.91158 2.425861 1.399254 4.923083 Z M 1.399254 4.923083 "
+                stroke-width="4"
+                stroke-opacity="1"
+                stroke-miterlimit="4"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="flex items-center space-x-2 mb-3">
+          <img src="./assets/emergency.png" class="w-10 h-10" />
+        </div>
+        <h2 class="card-title font-bold text-lg">Electricity Helpline</h2>
+        <p class="text-gray-500">Electricity Outage</p>
+        <p class="card-content text-xl font-bold mt-2">16216</p>
+        <span class="badge bg-gray-200 text-black mt-2">Electricity</span>
+        <div class="flex space-x-2 mt-4">
+          <button class="copyBtn btn btn-sm flex-1"<span><i class="fa-regular fa-copy"></i></span>Copy</button>
+          <button class="callBtn btn btn-sm bg-[#00a63e] flex-1">Call</button>
+        </div>
+      </div>
+
+        <!-- Card 8 -->
+      <div class="card card-8 bg-white shadow p-6 relative">
+        <div class="absolute top-3 right-3">
+          <button class="heartBtn cursor-pointer">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              width="30"
+              zoomAndPan="magnify"
+              viewBox="0 0 30 30.000001"
+              height="30"
+              preserveAspectRatio="xMidYMid meet"
+              version="1.0"
+              fill="transparent"
+              stroke="black"
+            >
+              <path
+                stroke-linecap="butt"
+                transform="matrix(0.725806, 0, 0, 0.725806, 2.207069, 3.731482)"
+                stroke-linejoin="miter"
+                d="M 1.399254 4.923083 C -1.458558 9.632284 0.554289 14.217701 3.083803 16.65034 L 17.878768 30.842528 L 32.361581 16.698778 C 34.71349 14.083153 35.617657 11.306069 35.117136 8.216833 C 34.422865 3.943569 30.903074 0.622909 26.549081 0.149298 C 23.879636 -0.135945 21.301685 0.617527 19.288838 2.291312 C 18.745261 2.743395 18.260886 3.243916 17.841094 3.792875 C 17.340574 3.168569 16.753942 2.598083 16.086581 2.09218 C 13.772344 0.337666 10.828421 -0.361986 7.997518 0.18159 C 5.31731 0.698257 2.91158 2.425861 1.399254 4.923083 Z M 1.399254 4.923083 "
+                stroke-width="4"
+                stroke-opacity="1"
+                stroke-miterlimit="4"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="flex items-center space-x-2 mb-3">
+          <img src="./assets/emergency.png" class="w-10 h-10" />
+        </div>
+        <h2 class="card-title font-bold text-lg">Brac Helpline</h2>
+        <p class="text-gray-500">Brac</p>
+        <p class="card-content text-xl font-bold mt-2">16445</p>
+        <span class="badge bg-gray-200 text-black mt-2">NGO</span>
+        <div class="flex space-x-2 mt-4">
+          <button class="copyBtn btn btn-sm flex-1"<span><i class="fa-regular fa-copy"></i></span>Copy</button>
+          <button class="callBtn btn btn-sm bg-[#00a63e] flex-1">Call</button>
+        </div>
+      </div>
+
+      <!-- Card 9 -->
+      <div class="card card-9 bg-white shadow p-6 relative">
+        <div class="absolute top-3 right-3">
+          <button class="heartBtn cursor-pointer">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink"
+              width="30"
+              zoomAndPan="magnify"
+              viewBox="0 0 30 30.000001"
+              height="30"
+              preserveAspectRatio="xMidYMid meet"
+              version="1.0"
+              fill="transparent"
+              stroke="black"
+            >
+              <path
+                stroke-linecap="butt"
+                transform="matrix(0.725806, 0, 0, 0.725806, 2.207069, 3.731482)"
+                stroke-linejoin="miter"
+                d="M 1.399254 4.923083 C -1.458558 9.632284 0.554289 14.217701 3.083803 16.65034 L 17.878768 30.842528 L 32.361581 16.698778 C 34.71349 14.083153 35.617657 11.306069 35.117136 8.216833 C 34.422865 3.943569 30.903074 0.622909 26.549081 0.149298 C 23.879636 -0.135945 21.301685 0.617527 19.288838 2.291312 C 18.745261 2.743395 18.260886 3.243916 17.841094 3.792875 C 17.340574 3.168569 16.753942 2.598083 16.086581 2.09218 C 13.772344 0.337666 10.828421 -0.361986 7.997518 0.18159 C 5.31731 0.698257 2.91158 2.425861 1.399254 4.923083 Z M 1.399254 4.923083 "
+                stroke-width="4"
+                stroke-opacity="1"
+                stroke-miterlimit="4"
+              />
+            </svg>
+          </button>
+        </div>
+        <div class="flex items-center space-x-2 mb-3">
+          <img src="./assets/emergency.png" class="w-10 h-10" />
+        </div>
+        <h2 class="card-title font-bold text-lg">Bangladesh Railway Helpline</h2>
+        <p class="text-gray-500">Bangladesh Railway</p>
+        <p class="card-content text-xl font-bold mt-2">163</p>
+        <span class="badge bg-gray-200 text-black mt-2">Travel</span>
+
+        <div class="flex space-x-2 mt-4">
+          <button class="copyBtn btn btn-sm flex-1"<span><i class="fa-regular fa-copy"></i></span>Copy</button>
+          <button class="callBtn btn btn-sm bg-[#00a63e] flex-1">Call</button>
+        </div>
+      </div>
+    </section>
+    <!-- History Section -->
+      <section class="w-full md:w-[20%] card bg-white shadow p-6">
+        <div class="flex justify-between items-center mb-4">
+          <h2 class="font-bold text-lg flex items-center gap-1" <span><i class="fa-regular fa-clock"></i></span>All History</h2>
+          <button id="clearHistory" class="btn btn-md bg-[#00a63e] rounded-xl">Clear</button>
+        </div>
+        <ul id="historyList" class="space-y-2 text-sm"></ul>
+      </section>
     </main>
     <script src="script.js"></script>
   </body>
